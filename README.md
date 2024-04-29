@@ -48,14 +48,13 @@ To run the Volvo Truck Database application locally:
 1. Ensure you have Python installed on your system.
 2. Clone the repository from GitHub.
 3. Navigate to the project directory.
-4. Run the Python script `volvo_truck_database.py`.
+4. Run the Python script `main.py`.
 5. The application window will appear, allowing you to interact with it.
 
 ## Credits
 
-- This project was developed by [Your Name] during [Hackathon Name].
-- Special thanks to [Any Collaborators or Mentors].
+- This project was developed by Kirsten Hefney during NCAT 7.0 Fall 2023 Hackathon.
 
 ## License
 
-This project is licensed under the [License Name]. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
