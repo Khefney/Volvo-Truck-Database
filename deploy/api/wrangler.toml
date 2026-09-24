@@ -1,0 +1,8 @@
+name = "volvo-truck-db-api"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "volvo-truck-db"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
