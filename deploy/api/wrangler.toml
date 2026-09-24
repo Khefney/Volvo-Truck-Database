@@ -5,4 +5,4 @@ compatibility_date = "2026-09-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "volvo-truck-db"
-database_id = "REPLACE_WITH_YOUR_D1_ID"
+database_id = "261f1a42-fcdf-47a9-a002-3297fa54b321"

@@ -1,6 +1,6 @@
 // Volvo Truck DB — Cloudflare Worker + D1
 const CORS = {
-  'Access-Control-Allow-Origin': '*', // lock to your Pages URL for production
+  'Access-Control-Allow-Origin': 'https://khefney.github.io',
   'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
 };
