@@ -2,6 +2,9 @@ name = "volvo-truck-db-api"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 
+[triggers]
+crons = ["0 11 * * *"]
+
 [[d1_databases]]
 binding = "DB"
 database_name = "volvo-truck-db"

@@ -1,60 +1,64 @@
-# Volvo Truck Database
+# Volvo Fleet Intelligence
 
-This project, developed using Python and Tkinter, provides a database interface for retrieving information about various Volvo trucks. It was created during a hackathon and secured the 2nd place.
+An independent portfolio project. Volvo does not endorse it, and the public demo does not contain a real Volvo fleet.
 
-## Overview
+```mermaid
+flowchart LR
+  browser[Single-page HTML]
+  worker[Cloudflare Worker]
+  d1[Cloudflare D1]
+  volvo[Volvo Basic Vehicle Information API]
+  browser --> worker
+  worker --> d1
+  worker -.->|only when credentials are configured| volvo
+```
 
-The Volvo Truck Database allows users to query information about different Volvo truck models, including details such as make, model, engine specifications, horsepower, torque, and type. The application presents a user-friendly interface where users can input a truck ID and select the type of information they want to retrieve.
+The browser never calls Volvo. Credentials, if they are ever added, stay in Worker secrets.
 
-## Features
+## How it got here
 
-- Input a truck ID to fetch specific truck details.
-- Select the type of information desired (make, model, engine, etc.).
-- Displays the requested information in a clear format.
-- Provides error handling for invalid queries.
+**2023.** NC A&T Hackathon. A Python/Tkinter vehicle lookup, `main.py`, placed 2nd. That submission is preserved on the `master` branch.
 
-## Usage
+**2026.** The `deploy` branch is a cloud fleet-intelligence demo:
 
-1. Enter the Truck ID in the designated field.
-2. Select the desired information type from the dropdown menu.
-3. Click the "Get Information" button to retrieve the information.
-4. The result will be displayed below the button.
+- Cloudflare Workers REST API
+- Cloudflare D1
+- Fleet overview, vehicle detail, and rule-based fleet health
+- Maintenance and a placeholder parts catalog
+- Simulated historical readings
+- A geographic demo map of the North Carolina Piedmont
+- Electrification estimates and a mission comparison
+- A Volvo-compatible adapter that stays off until credentials exist
 
-## Supported Truck Models
+## What the numbers mean
 
-The application supports the following Volvo truck models:
+Demo fleet telemetry is simulated. VINs look like `SIM-VT-0101` and are not Volvo VINs. Truck specifications and operating costs are authoritative only when a source is shown. The Electrification Lab and Mission Planner are labeled **ESTIMATE**. They are not measured fleet performance.
 
-- FH-E (Electric)
-- FH (Diesel)
-- FH-GAS (Natural Gas)
-- VNR400 (Diesel)
-- VNL (Diesel)
-- VHD (Diesel)
-- FL (Diesel)
-- FE (Diesel)
-- FM (Diesel)
-- FMX (Diesel)
+Volvo Basic Vehicle Information integration needs valid vehicle authorization and API credentials (`VOLVO_CLIENT_ID`, `VOLVO_CLIENT_SECRET`, `VOLVO_API_BASE_URL`, `VOLVO_TOKEN_URL`). No real Volvo fleet data is bundled in the public demo. The scheduled ingest exits when those secrets are missing. That API is a rolling history, not second-by-second telemetry.
 
-## Technologies Used
+## Run the 2023 desktop app
 
-- Python
-- Tkinter (GUI library)
-- GitHub (for version control and hosting)
+`main.py` is the original hackathon lookup. It is separate from the web app.
 
-## How to Run
+1. Install Python.
+2. Run `python main.py`.
 
-To run the Volvo Truck Database application locally:
+## Web app
 
-1. Ensure you have Python installed on your system.
-2. Clone the repository from GitHub.
-3. Navigate to the project directory.
-4. Run the Python script `main.py`.
-5. The application window will appear, allowing you to interact with it.
+The page is `index.html` at the repo root, duplicated in `deploy/index.html`. Both files must stay identical. It calls `window.VTDB_API` and falls back to built-in demo data if that API is unreachable.
 
-## Credits
+The Worker lives in `deploy/api`. Live database changes go in `deploy/api/migrations/` and must not drop existing tables. `deploy/api/schema.sql` is the original bootstrap and is not safe to replay on the live database.
 
-- This project was developed by Kirsten Hefney during NCAT 7.0 Fall 2023 Hackathon.
+Public visitors can read the API. Creating, updating, or deleting rows requires an `ADMIN_TOKEN` Worker secret sent as `X-Admin-Token`.
+
+## API
+
+Existing lookups still work: `GET /api/trucks`, `GET /api/trucks/:id`, `GET /api/trucks/:id/:field`, `GET /api/service`, `GET /api/parts`.
+
+Normalized routes: `GET /api/vehicles`, `GET /api/vehicles/:id`, `GET /api/vehicles/:id/readings`, `GET /api/vehicles/:id/health`, `GET /api/vehicles/:id/service`, `GET /api/fleet/health`, `GET /api/fleet/analytics`, `GET /api/assumptions`, `GET /api/fleet/mission`.
+
+A future Fleet Analyst should call these structured routes and should not invent truck facts.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+MIT. See `LICENSE`.

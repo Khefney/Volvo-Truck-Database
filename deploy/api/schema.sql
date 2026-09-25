@@ -1,3 +1,5 @@
+-- Original hackathon bootstrap. Do not run this file against the live D1 database.
+-- Live changes belong in deploy/api/migrations/.
 DROP TABLE IF EXISTS trucks; DROP TABLE IF EXISTS service; DROP TABLE IF EXISTS parts;
 CREATE TABLE trucks (id TEXT PRIMARY KEY, model_key TEXT, make TEXT, model TEXT, engine TEXT, horsepower INTEGER, torque INTEGER, type TEXT, status TEXT, loc TEXT, x REAL, y REAL, odo INTEGER, level INTEGER);
 CREATE TABLE service (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, truck_id TEXT, kind TEXT, descr TEXT, cost INTEGER, status TEXT);
