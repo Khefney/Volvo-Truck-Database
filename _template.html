@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volvo Fleet Intelligence</title>
+<script src="b10564b5-8ca7-4504-a2ad-f741d19af0d3"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* Industry — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fe92e94a-dff5-4233-b470-0a291d11ccb9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("66b4e124-8fc2-4fcc-b0de-4c34ac996dd6") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fdd81c2c-8f9a-4bc6-b08c-b3a9f5c26b2d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("71d9b7b7-822c-4dc6-880a-eb04b8af5ed9") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("15f6feef-d729-4e6b-b526-4d1f4b4cb689") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("6f91d2f5-56be-495f-bce8-a107eaf0f4f4") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("3b79f968-98ed-4df2-a795-af3955c9ec57") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("10496bd7-1ec5-48f2-9e63-121f09b77947") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("87eea6cc-0434-42c2-8eea-5c19c1e049f4") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c48d12f0-e9ff-48e9-a68e-2b45fcdd744a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("55ef1751-2b18-4bc7-95fc-1a44d37686fa") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2575ea78-845e-49a6-8346-3755ad91fe73") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("994f4d10-6533-4648-9680-41aa541dfa52") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("4fcc8276-362c-4515-9d73-9a0025c9c712") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("1efd4146-372c-42ba-a5dd-b38181fb1c10") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+:root {
+  --color-bg: #f2f2f3;
+  --color-surface: #e9e9ea;
+  --color-text: #1d1f20;
+  --color-accent: #5980a6;
+  --color-accent-2: #728fab;
+  --color-divider: color-mix(in srgb, #1d1f20 16%, transparent);
+
+  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
+     same step of any role matches the others in visual value. */
+  --color-neutral-100: #f5f5f8;
+  --color-neutral-200: #e7e7ea;
+  --color-neutral-300: #d4d4d7;
+  --color-neutral-400: #b7b7ba;
+  --color-neutral-500: #98989b;
+  --color-neutral-600: #7a7a7d;
+  --color-neutral-700: #5d5d60;
+  --color-neutral-800: #424244;
+  --color-neutral-900: #2b2b2d;
+
+  --color-accent-100: #eef6ff;
+  --color-accent-200: #d6ebff;
+  --color-accent-300: #b5d9fd;
+  --color-accent-400: #94bce3;
+  --color-accent-500: #749dc4;
+  --color-accent-600: #597ea3;
+  --color-accent-700: #416180;
+  --color-accent-800: #2c455d;
+  --color-accent-900: #1d2d3d;
+
+  --color-accent-2-100: #eef6ff;
+  --color-accent-2-200: #d6ebff;
+  --color-accent-2-300: #bdd8f2;
+  --color-accent-2-400: #9ebbd8;
+  --color-accent-2-500: #7e9cb8;
+  --color-accent-2-600: #627d98;
+  --color-accent-2-700: #486077;
+  --color-accent-2-800: #314457;
+  --color-accent-2-900: #1f2d3a;
+
+  --font-heading: "Barlow Condensed", system-ui, sans-serif;
+  --font-heading-weight: 600;
+  --font-body: "Barlow", system-ui, sans-serif;
+
+  --space-1: 3.4px;
+  --space-2: 6.8px;
+  --space-3: 10.2px;
+  --space-4: 13.6px;
+  --space-6: 20.4px;
+  --space-8: 27.2px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 7px;
+
+  /* Elevation — derived from the ground: soft ink-tinted shadows on a
+     light theme, a hairline edge + ambient darkness on a dark one. */
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2b2b2d 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2b2b2d 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2b2b2d 22%, transparent);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+
+.blueprint {
+  position: relative;
+  border: 1px solid var(--color-divider);
+  border-radius: 0;
+}
+/* The overlay image treatments (halftone, duotone) clip their overlay
+   (overflow:hidden); a blueprint wrapper draws its registration marks
+   outside the box, so when both classes share a wrapper the frame must
+   win. */
+.blueprint.halftone, .blueprint.plate, .blueprint.duotone { overflow: visible; }
+.blueprint > .corner {
+  position: absolute; width: 11px; height: 11px;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.blueprint > .corner::before, .blueprint > .corner::after {
+  content: ""; position: absolute; background: currentColor;
+}
+.blueprint > .corner::before { left: 5px; top: 0; width: 1px; height: 100%; }
+.blueprint > .corner::after  { top: 5px; left: 0; width: 100%; height: 1px; }
+.blueprint > .corner.tl { top: -6px; left: -6px; }
+.blueprint > .corner.tr { top: -6px; right: -6px; }
+.blueprint > .corner.bl { bottom: -6px; left: -6px; }
+.blueprint > .corner.br { bottom: -6px; right: -6px; }
+
+.duotone{position:relative;overflow:hidden}
+.duotone::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:var(--color-accent);mix-blend-mode:color}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Components — built with the tokens above. Plain CSS
+   on plain HTML: no JavaScript, no build step. Each class is documented in
+   readme.md and demonstrated in foundations/ and components/.
+   ══════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+h6 { letter-spacing: 0.08em; text-transform: uppercase; }
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px; margin-top: var(--space-1);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* — rules — */
+.hr {
+  height: 1px; border: 0; margin: var(--space-4) 0;
+  background: var(--color-divider);
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; line-height: 1.2; color: var(--color-text); /* matches the .input's 14px —
+     the pair sits side by side in sign-up rows */
+  background: transparent; border: 1px solid transparent;
+  padding: var(--space-2) calc(var(--space-3) * 1.2);
+  border-radius: var(--radius-md);
+}
+.btn svg { display: block; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-bg); }
+.btn-primary:hover { background: var(--color-accent-600); }
+.btn-primary:active { background: var(--color-accent-700); }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.btn-icon { width: 36px; height: 36px; padding: 0; }
+.btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* — forms — */
+.field > label {
+  display: block; font-size: 12px; margin-bottom: 5px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+.input {
+  width: 100%; min-height: 36px; padding: 6px 10px; font: inherit;
+  font-size: 14px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.input:hover { border-color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+textarea.input { min-height: 90px; resize: vertical; }
+.radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.radio input, .seg-opt input {
+  position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.radio .dot {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  border: 1.5px solid var(--color-divider);
+}
+.radio:hover .dot { border-color: var(--color-accent); }
+.radio input:checked + .dot {
+  border-color: var(--color-accent); background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+.radio input:focus-visible + .dot { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.seg {
+  display: inline-flex; overflow: hidden;
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.seg-opt {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; font-size: 13px; cursor: pointer;
+}
+.seg-opt + .seg-opt { border-left: 1px solid var(--color-divider); }
+.seg-opt:has(input:checked) { background: var(--color-accent); color: var(--color-bg); }
+.seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.seg-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+
+/* — cards — */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
+}
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 17px; line-height: 1.2;
+}
+.card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
+.card-meta {
+  display: flex; align-items: center; gap: 6px; font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.elev-sm { box-shadow: var(--shadow-sm); }
+.elev-md { box-shadow: var(--shadow-md); }
+.elev-lg { box-shadow: var(--shadow-lg); }
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px;
+  letter-spacing: 0.02em; padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
+.tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+.tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+
+/* — navigation — */
+.nav {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: none;
+}
+.nav-brand {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 18px; margin-right: auto;
+}
+.nav a { color: inherit; text-decoration: none; font-size: 14px; }
+.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+
+/* — tables — */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2); border-bottom: 1px solid var(--color-divider);
+}
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+
+/* — dialog — */
+.dialog-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
+}
+.dialog {
+  width: min(440px, 100%); display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-lg);
+}
+.dialog-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px;
+}
+.dialog-body { font-size: 14px; opacity: 0.85; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* — blueprint frame: components are wireframe objects (see .blueprint
+     and .corner above) — square, transparent, hairline-bordered — */
+.card, .btn, .input, .tag, .seg, .dialog { border-radius: 0; }
+.card, .dialog { background: transparent; border: 1px solid var(--color-divider); }
+.btn { border: 1px solid var(--color-divider); }
+.btn-primary { border-color: var(--color-accent); }
+.btn-ghost { border-color: transparent; }
+.blueprint:hover { border-color: var(--color-accent); }
+.vfi-pulse { animation: vfi-pulse 1.8s ease-in-out infinite; }
+@keyframes vfi-pulse { 50% { opacity: .35; } }
+@media (max-width: 860px) {
+  .vfi-shell { display: flex !important; flex-direction: column; }
+  .vfi-shell > aside { position: relative !important; height: auto !important; }
+  .vfi-main { padding: 24px 16px 48px !important; }
+  .vfi-main h1 { font-size: 32px !important; }
+}
+
+</style>
+<script src="08f32a4c-64c0-46d7-8d8b-bee07ceeaea2"></script>
+
+<style>body{margin:0}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}</style>
+</helmet>
+<div class="vfi-shell" style="display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+
+<aside style="position:sticky;top:0;height:100vh;overflow:auto;display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-6) var(--space-4);border-right:1px solid var(--color-divider)">
+  <div style="display:flex;flex-direction:column;gap:2px;padding:0 var(--space-2)">
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:18px;letter-spacing:0.04em;text-transform:uppercase;line-height:1.05">Volvo Fleet Intelligence</div>
+    <div style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700)">Independent portfolio demo</div>
+  </div>
+  <nav style="display:flex;flex-direction:column;gap:2px">
+    <button sc-camel-on-click="{{ go.dashboard }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.dashboard.bg }};color:{{ nav.dashboard.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>Dashboard</button>
+    <button sc-camel-on-click="{{ go.fleet }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.fleet.bg }};color:{{ nav.fleet.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>Fleet</button>
+    <button sc-camel-on-click="{{ go.health }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.health.bg }};color:{{ nav.health.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 12h4l2-6 4 12 2-6h6"></path></svg>Fleet health</button>
+    <button sc-camel-on-click="{{ go.map }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.map.bg }};color:{{ nav.map.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.830A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>Map</button>
+    <button sc-camel-on-click="{{ go.service }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.service.bg }};color:{{ nav.service.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Service center</button>
+    <button sc-camel-on-click="{{ go.parts }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.parts.bg }};color:{{ nav.parts.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>Parts lookup</button>
+    <button sc-camel-on-click="{{ go.analytics }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.analytics.bg }};color:{{ nav.analytics.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>Electrification</button>
+    <button sc-camel-on-click="{{ go.mission }}" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:0;cursor:pointer;font:500 14px var(--font-body);text-align:left;background:{{ nav.mission.bg }};color:{{ nav.mission.fg }}" style-hover="background:var(--color-accent-100)">
+      <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 19V5"></path><path d="M4 15h10l2-4H8"></path><path d="M14 7h6"></path></svg>Mission planner</button>
+  </nav>
+  <button class="btn btn-primary blueprint" sc-camel-on-click="{{ go.add }}" style="white-space:nowrap;flex:none;justify-content:flex-start;gap:10px;padding:10px 12px;font-size:15px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add record</button>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:4px;padding:0 var(--space-2);font-size:11px;color:var(--color-neutral-700)">
+    <span style="display:flex;align-items:center;gap:6px;letter-spacing:0.08em;text-transform:uppercase"><span class="vfi-pulse" style="width:8px;height:8px;border-radius:50%;background:{{ sourceDot }}"></span>{{ sourceTitle }}</span>
+    <span>{{ dataSource }}</span>
+    <span>Not affiliated with Volvo.</span>
+  </div>
+</aside>
+
+<main class="vfi-main" style="min-width:0;padding:var(--space-8) 40px 64px;display:flex;flex-direction:column;gap:var(--space-8);max-width:1320px">
+
+<!-- DASHBOARD -->
+<sc-if value="{{ is.dashboard }}" hint-placeholder-val="{{ true }}">
+  <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Overview · simulated North Carolina fleet</div>
+      <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase;letter-spacing:0.01em">What needs attention</h1>
+      <p style="margin:8px 0 0;max-width:640px;color:var(--color-neutral-700)">Connected fleet operations, maintenance, energy, and decision support. Independent portfolio demo — not a Volvo product.</p>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-secondary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ go.map }}">View map</button>
+      <button class="btn btn-primary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ go.analytics }}">Electrification lab</button>
+    </div>
+  </header>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+    <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+      <div class="blueprint" style="padding:18px 20px;display:flex;flex-direction:column;gap:4px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700)">{{ k.label }}</div>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:44px;line-height:1;white-space:nowrap">{{ k.value }}<span style="font-size:18px;margin-left:4px;color:var(--color-neutral-700)">{{ k.unit }}</span></div>
+        <div style="font-size:12px;color:var(--color-accent-700)">{{ k.note }}</div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px">
+    <section class="blueprint" style="padding:20px;display:flex;flex-direction:column;gap:16px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <h3 style="margin:0;text-transform:uppercase">CO₂ by powertrain</h3>
+        <span style="font-size:12px;color:var(--color-neutral-700)">well-to-wheel, g per {{ unit }}</span>
+      </div>
+      <sc-for list="{{ powerBars }}" as="b" hint-placeholder-count="3">
+        <div style="display:grid;grid-template-columns:120px minmax(0,1fr) 80px;align-items:center;gap:14px">
+          <div style="display:flex;flex-direction:column"><span style="font-weight:500">{{ b.label }}</span><span style="font-size:11px;color:var(--color-neutral-700)">{{ b.count }} trucks</span></div>
+          <div style="height:22px;border:1px solid var(--color-divider);position:relative">
+            <div style="position:absolute;inset:0 auto 0 0;width:{{ b.w }};background:{{ b.fill }}"></div>
+          </div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;text-align:right">{{ b.value }}</div>
+        </div>
+      </sc-for>
+      <p style="margin:0;font-size:13px;color:var(--color-neutral-700);text-wrap:pretty">ESTIMATE. These bars use the demo assumptions, not a certified Volvo test and not a measured grid factor.</p>
+    </section>
+    <section class="blueprint" style="padding:20px;display:flex;flex-direction:column;gap:12px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <h3 style="margin:0;text-transform:uppercase">Needs attention</h3>
+      <sc-for list="{{ alerts }}" as="a" hint-placeholder-count="4">
+        <button sc-camel-on-click="{{ a.open }}" style="display:grid;grid-template-columns:8px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border:0;border-bottom:1px solid var(--color-divider);background:transparent;cursor:pointer;text-align:left;font:inherit;color:inherit">
+          <span style="width:8px;height:8px;background:{{ a.dot }}"></span>
+          <span style="display:flex;flex-direction:column"><span style="font-weight:500">{{ a.title }}</span><span style="font-size:12px;color:var(--color-neutral-700)">{{ a.sub }}</span></span>
+          <span style="font-size:12px;color:var(--color-accent-700)">{{ a.unitId }}</span>
+        </button>
+      </sc-for>
+    </section>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+    <section class="blueprint" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <h3 style="margin:0;text-transform:uppercase">Fleet health</h3>
+      <sc-for list="{{ healthBands }}" as="b" hint-placeholder-count="3">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-divider);padding:6px 0"><span>{{ b.label }}</span><span style="font-family:var(--font-heading);font-size:22px">{{ b.value }}</span></div>
+      </sc-for>
+      <button class="btn btn-secondary" sc-camel-on-click="{{ go.health }}">Open scores</button>
+    </section>
+    <section class="blueprint" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <h3 style="margin:0;text-transform:uppercase">Recent maintenance</h3>
+      <sc-for list="{{ recentService }}" as="s" hint-placeholder-count="3">
+        <button sc-camel-on-click="{{ s.open }}" style="display:flex;justify-content:space-between;gap:8px;border:0;border-bottom:1px solid var(--color-divider);background:transparent;padding:8px 0;text-align:left;font:inherit;color:inherit;cursor:pointer"><span>{{ s.date }} · {{ s.desc }}</span><span>{{ s.unit }}</span></button>
+      </sc-for>
+    </section>
+    <section class="blueprint" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <h3 style="margin:0;text-transform:uppercase">Energy / fuel trend</h3>
+      <svg viewBox="0 0 320 80" width="100%" height="80" role="img" aria-label="Energy or fuel trend"><polyline points="{{ energyPoints }}" fill="none" stroke="currentColor" stroke-width="2"></polyline></svg>
+      <p style="margin:0;font-size:12px;color:var(--color-neutral-700)">{{ energyNote }}</p>
+    </section>
+    <section class="blueprint" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <h3 style="margin:0;text-transform:uppercase">Electrification snapshot</h3>
+      <p style="margin:0;font-size:14px">{{ elexSnapshot }}</p>
+      <p style="margin:0;font-size:12px;color:var(--color-neutral-700)">ESTIMATE. Not actual fleet performance.</p>
+      <button class="btn btn-secondary" sc-camel-on-click="{{ go.analytics }}">Open the lab</button>
+    </section>
+  </div>
+
+  <sc-if value="{{ showLearn }}" hint-placeholder-val="{{ true }}">
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:baseline;gap:12px">
+        <h3 style="margin:0;text-transform:uppercase">Learn with the community</h3>
+        <span style="font-size:13px;color:var(--color-neutral-700)">Short explainers for drivers, students and neighbours</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <sc-for list="{{ lessons }}" as="l" hint-placeholder-count="3">
+          <article class="card blueprint" style="padding:18px;gap:8px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span class="card-kicker" style="color:var(--color-accent-700)">{{ l.kicker }}</span>
+            <span class="card-title" style="font-size:20px">{{ l.title }}</span>
+            <p class="card-body" style="text-wrap:pretty">{{ l.body }}</p>
+            <span class="card-meta">{{ l.meta }}</span>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+</sc-if>
+
+<!-- FLEET -->
+<sc-if value="{{ is.fleet }}" hint-placeholder-val="{{ false }}">
+  <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Database · {{ fleetCount }} of {{ totalCount }} units</div>
+      <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Fleet</h1>
+    </div>
+    <button class="btn btn-primary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ go.add }}">Add truck</button>
+  </header>
+  <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+    <div style="position:relative;flex:1;min-width:260px;max-width:440px">
+      <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="position:absolute;left:10px;top:10px;color:var(--color-neutral-600)"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input class="input" placeholder="Search by truck ID, model, engine or location" value="{{ query }}" sc-camel-on-change="{{ onQuery }}" style="padding-left:34px">
+    </div>
+    <div class="seg">
+      <sc-for list="{{ typeFilters }}" as="f" hint-placeholder-count="4">
+        <button sc-camel-on-click="{{ f.pick }}" style="white-space:nowrap;padding:8px 14px;border:0;border-right:1px solid var(--color-divider);font:13px var(--font-body);cursor:pointer;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+  <div class="blueprint" style="padding:4px 12px 8px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="overflow-x:auto"><sc-raw-table class="table">
+      <sc-raw-thead><sc-raw-tr><sc-raw-th>Truck ID</sc-raw-th><sc-raw-th>Model</sc-raw-th><sc-raw-th>Powertrain</sc-raw-th><sc-raw-th>Engine</sc-raw-th><sc-raw-th style="text-align:right">HP</sc-raw-th><sc-raw-th style="text-align:right">Torque Nm</sc-raw-th><sc-raw-th>Status</sc-raw-th><sc-raw-th>Location</sc-raw-th><sc-raw-th style="text-align:right">Est. g/{{ unit }}</sc-raw-th></sc-raw-tr></sc-raw-thead>
+      <sc-raw-tbody>
+        <sc-for list="{{ fleetRows }}" as="t" hint-placeholder-count="8">
+          <sc-raw-tr sc-camel-on-click="{{ t.open }}" style="cursor:pointer">
+            <sc-raw-td style="font-weight:500;color:var(--color-accent-700)">{{ t.id }}</sc-raw-td>
+            <sc-raw-td>{{ t.model }}</sc-raw-td>
+            <sc-raw-td style="white-space:nowrap"><span class="tag {{ t.typeTag }}">{{ t.type }}</span></sc-raw-td>
+            <sc-raw-td>{{ t.engine }}</sc-raw-td>
+            <sc-raw-td style="text-align:right;font-variant-numeric:tabular-nums">{{ t.horsepower }}</sc-raw-td>
+            <sc-raw-td style="text-align:right;font-variant-numeric:tabular-nums">{{ t.torque }}</sc-raw-td>
+            <sc-raw-td style="white-space:nowrap"><span class="tag {{ t.statusTag }}">{{ t.status }}</span></sc-raw-td>
+            <sc-raw-td style="white-space:nowrap">{{ t.loc }}</sc-raw-td>
+            <sc-raw-td style="text-align:right;font-variant-numeric:tabular-nums">{{ t.co2 }}</sc-raw-td>
+          </sc-raw-tr>
+        </sc-for>
+      </sc-raw-tbody>
+    </sc-raw-table></div>
+    <sc-if value="{{ fleetEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:32px;text-align:center;color:var(--color-neutral-700)">No data found for "{{ query }}"</div>
+    </sc-if>
+  </div>
+</sc-if>
+
+<!-- DETAIL -->
+<sc-if value="{{ is.detail }}" hint-placeholder-val="{{ false }}">
+  <button class="btn btn-ghost" sc-camel-on-click="{{ go.fleet }}" style="white-space:nowrap;flex:none;align-self:flex-start;gap:6px">
+    <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Fleet</button>
+  <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:-16px">
+    <div>
+      <div style="display:flex;gap:8px;align-items:center"><span class="tag {{ sel.typeTag }}">{{ sel.type }}</span><span class="tag {{ sel.statusTag }}">{{ sel.status }}</span></div>
+      <h1 style="margin:8px 0 0;font-size:56px;text-transform:uppercase;line-height:1">{{ sel.id }} <span style="color:var(--color-accent)">{{ sel.key }}</span></h1>
+      <div style="margin-top:6px;color:var(--color-neutral-700)">{{ sel.loc }} · {{ sel.odo }} {{ unit }} on odometer</div>
+      <div style="margin-top:4px;font-size:12px;letter-spacing:0.06em;text-transform:uppercase">{{ sel.sourceLabel }} · {{ sel.updatedLabel }}</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-secondary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ go.service }}">Log service</button>
+      <button class="btn btn-primary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ go.edit }}">Edit record</button>
+    </div>
+  </header>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px">
+    <div class="blueprint" style="min-height:300px;display:grid;place-items:center;background:repeating-linear-gradient(135deg,transparent 0 10px,var(--color-accent-100) 10px 11px)">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="text-align:center;padding:24px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent-700)">{{ sel.sourceLabel }}</span>
+        <span style="font-family:var(--font-heading);font-size:40px">{{ sel.healthScore }}</span>
+        <span>{{ sel.healthBand }}</span>
+        <span style="font-size:13px;color:var(--color-neutral-700)">{{ sel.vin }}</span>
+      </div>
+    </div>
+    <div class="blueprint" style="display:grid;grid-template-columns:1fr 1fr">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <sc-for list="{{ sel.specs }}" as="s" hint-placeholder-count="6">
+        <div style="padding:16px 18px;border-bottom:1px solid var(--color-divider);border-right:1px solid var(--color-divider);display:flex;flex-direction:column;gap:2px">
+          <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700)">{{ s.k }}</span>
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.15">{{ s.v }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+    <sc-for list="{{ sel.eco }}" as="e" hint-placeholder-count="3">
+      <div class="blueprint" style="padding:18px 20px;display:flex;flex-direction:column;gap:6px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700)">{{ e.label }}</span>
+        <span style="font-family:var(--font-heading);font-weight:600;font-size:36px;line-height:1">{{ e.value }}</span>
+        <span style="font-size:13px;color:var(--color-accent-700);text-wrap:pretty">{{ e.note }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <section class="blueprint" style="padding:8px 12px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <h4 style="margin:10px 8px;text-transform:uppercase">Service history · {{ sel.id }}</h4>
+    <sc-raw-table class="table">
+      <sc-raw-thead><sc-raw-tr><sc-raw-th>Date</sc-raw-th><sc-raw-th>Type</sc-raw-th><sc-raw-th>Work</sc-raw-th><sc-raw-th style="text-align:right">Cost</sc-raw-th><sc-raw-th>Status</sc-raw-th></sc-raw-tr></sc-raw-thead>
+      <sc-raw-tbody>
+        <sc-for list="{{ sel.history }}" as="h" hint-placeholder-count="3">
+          <sc-raw-tr><sc-raw-td>{{ h.date }}</sc-raw-td><sc-raw-td>{{ h.kind }}</sc-raw-td><sc-raw-td>{{ h.desc }}</sc-raw-td><sc-raw-td style="text-align:right">{{ h.cost }}</sc-raw-td><sc-raw-td><span class="tag {{ h.tag }}">{{ h.status }}</span></sc-raw-td></sc-raw-tr>
+        </sc-for>
+      </sc-raw-tbody>
+    </sc-raw-table>
+  </section>
+  <section class="blueprint" style="padding:16px;display:flex;flex-direction:column;gap:8px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <h4 style="margin:0;text-transform:uppercase">Why this health score</h4>
+    <sc-for list="{{ sel.healthReasons }}" as="r" hint-placeholder-count="2">
+      <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--color-divider);padding:6px 0"><span>{{ r.text }}</span><span>{{ r.delta }}</span></div>
+    </sc-for>
+  </section>
+  <section class="blueprint" style="padding:16px;display:flex;flex-direction:column;gap:12px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+      <h4 style="margin:0;text-transform:uppercase">Reading history · simulated</h4>
+      <div class="seg"><sc-for list="{{ ranges }}" as="r" hint-placeholder-count="4"><button sc-camel-on-click="{{ r.pick }}" style="padding:6px 10px;border:0;border-right:1px solid var(--color-divider);cursor:pointer;background:{{ r.bg }};color:{{ r.fg }}">{{ r.label }}</button></sc-for></div>
+    </div>
+    <sc-if value="{{ sel.hasChart }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+        <div><div style="font-size:12px;color:var(--color-neutral-700)">Odometer (km)</div><svg viewBox="0 0 320 80" width="100%" height="80"><polyline points="{{ sel.odoPoints }}" fill="none" stroke="currentColor" stroke-width="2"></polyline></svg></div>
+        <div><div style="font-size:12px;color:var(--color-neutral-700)">{{ sel.levelName }}</div><svg viewBox="0 0 320 80" width="100%" height="80"><polyline points="{{ sel.levelPoints }}" fill="none" stroke="currentColor" stroke-width="2"></polyline></svg></div>
+      </div>
+    </sc-if>
+  </section>
+  <section class="blueprint" style="padding:16px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <h4 style="margin:0 0 8px;text-transform:uppercase">Available demo parameters</h4>
+    <sc-for list="{{ sel.parameters }}" as="p" hint-placeholder-count="3">
+      <div style="display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--color-divider);font-size:13px"><span>{{ p.name }}</span><span style="color:var(--color-neutral-700)">{{ p.type }} · {{ p.unit }}</span></div>
+    </sc-for>
+  </section>
+</sc-if>
+
+<!-- MAP -->
+<sc-if value="{{ is.map }}" hint-placeholder-val="{{ false }}">
+  <header>
+    <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Simulated coordinates · North Carolina Piedmont</div>
+    <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Fleet map</h1>
+  </header>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+    <div class="blueprint" style="height:560px;overflow:visible">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="position:absolute;inset:0;overflow:hidden;background-color:var(--color-bg);background-image:linear-gradient(var(--color-divider) 1px,transparent 1px),linear-gradient(90deg,var(--color-divider) 1px,transparent 1px);background-size:56px 56px">
+        <div style="position:absolute;left:0;right:0;top:46%;height:2px;background:var(--color-accent-300)"></div>
+        <div style="position:absolute;left:8%;right:30%;top:0;bottom:0;border-right:2px solid var(--color-accent-300);transform:skewX(-24deg)"></div>
+        <div style="position:absolute;left:12px;top:calc(46% - 22px);font-size:11px;letter-spacing:0.1em;color:var(--color-accent-700)">I-40</div>
+        <sc-for list="{{ chargers }}" as="c" hint-placeholder-count="4">
+          <div title="{{ c.name }}" style="position:absolute;left:{{ c.x }};top:{{ c.y }};transform:translate(-50%,-50%);width:14px;height:14px;border:1.5px solid var(--color-accent-800);background:var(--color-bg);display:grid;place-items:center;font-size:9px;font-weight:700;color:var(--color-accent-800)">⚡</div>
+        </sc-for>
+        <sc-for list="{{ mapDots }}" as="d" hint-placeholder-count="10">
+          <button sc-camel-on-click="{{ d.pick }}" title="{{ d.id }}" style="position:absolute;left:{{ d.x }};top:{{ d.y }};transform:translate(-50%,-50%);width:{{ d.size }};height:{{ d.size }};border-radius:50%;border:2px solid {{ d.ring }};background-color:{{ d.fill }};cursor:pointer;padding:0;display:block"></button>
+        </sc-for>
+      </div>
+      <div style="position:absolute;left:16px;bottom:16px;display:flex;gap:16px;padding:8px 12px;background:var(--color-bg);border:1px solid var(--color-divider);font-size:12px">
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--color-accent)"></span>Electric</span>
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--color-accent-300)"></span>Natural gas</span>
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:var(--color-neutral-700)"></span>Diesel</span>
+        <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border:1.5px solid var(--color-accent-800)"></span>Charging / CNG</span>
+      </div>
+      <div style="position:absolute;right:16px;top:12px;font-size:11px;color:var(--color-neutral-700)">SIMULATED DATA · not a live Volvo fleet</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div class="blueprint" style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <span class="tag {{ mapSel.typeTag }}" style="align-self:flex-start">{{ mapSel.type }}</span>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:32px;line-height:1;text-transform:uppercase">{{ mapSel.id }} · {{ mapSel.key }}</div>
+        <div style="font-size:13px;color:var(--color-neutral-700)">{{ mapSel.loc }}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--color-divider)">
+          <div><div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-neutral-700)">{{ mapSel.levelLabel }}</div><div style="font-family:var(--font-heading);font-size:24px;font-weight:600">{{ mapSel.level }}%</div></div>
+          <div><div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-neutral-700)">Odometer</div><div style="font-family:var(--font-heading);font-size:24px;font-weight:600">{{ mapSel.odoText }}</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--color-neutral-700)">{{ mapSel.coords }} · {{ mapSel.updated }}</div>
+        <button class="btn btn-primary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ mapSel.open }}">Open record</button>
+      </div>
+      <div class="blueprint" style="padding:6px 16px;display:flex;flex-direction:column">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <sc-for list="{{ chargers }}" as="c" hint-placeholder-count="4">
+          <div style="display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid var(--color-divider);font-size:13px"><span>{{ c.name }}</span><span style="color:var(--color-accent-700)">{{ c.kind }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<!-- SERVICE -->
+<sc-if value="{{ is.service }}" hint-placeholder-val="{{ false }}">
+  <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Maintenance · same log the health score uses</div>
+      <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Service center</h1>
+    </div>
+    <div class="seg">
+      <sc-for list="{{ svcFilters }}" as="f" hint-placeholder-count="3">
+        <button sc-camel-on-click="{{ f.pick }}" style="white-space:nowrap;padding:8px 14px;border:0;border-right:1px solid var(--color-divider);font:13px var(--font-body);cursor:pointer;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</button>
+      </sc-for>
+    </div>
+  </header>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+    <sc-for list="{{ svcStats }}" as="k" hint-placeholder-count="3">
+      <div class="blueprint" style="padding:16px 20px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700)">{{ k.label }}</div>
+        <div style="font-family:var(--font-heading);font-weight:600;font-size:36px;line-height:1.1">{{ k.value }}</div>
+        <div style="font-size:12px;color:var(--color-accent-700)">{{ k.note }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div class="blueprint" style="padding:4px 12px 8px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <sc-raw-table class="table">
+      <sc-raw-thead><sc-raw-tr><sc-raw-th>Date</sc-raw-th><sc-raw-th>Truck</sc-raw-th><sc-raw-th>Model</sc-raw-th><sc-raw-th>Type</sc-raw-th><sc-raw-th>Work performed</sc-raw-th><sc-raw-th style="text-align:right">Cost</sc-raw-th><sc-raw-th>Status</sc-raw-th><sc-raw-th>Health</sc-raw-th></sc-raw-tr></sc-raw-thead>
+      <sc-raw-tbody>
+        <sc-for list="{{ svcRows }}" as="s" hint-placeholder-count="8">
+          <sc-raw-tr sc-camel-on-click="{{ s.open }}" style="cursor:pointer"><sc-raw-td>{{ s.date }}</sc-raw-td><sc-raw-td style="color:var(--color-accent-700);font-weight:500">{{ s.unit }}</sc-raw-td><sc-raw-td>{{ s.model }}</sc-raw-td><sc-raw-td>{{ s.kind }}</sc-raw-td><sc-raw-td>{{ s.desc }}</sc-raw-td><sc-raw-td style="text-align:right;font-variant-numeric:tabular-nums">{{ s.cost }}</sc-raw-td><sc-raw-td><span class="tag {{ s.tag }}">{{ s.status }}</span></sc-raw-td><sc-raw-td>{{ s.impact }}</sc-raw-td></sc-raw-tr>
+        </sc-for>
+      </sc-raw-tbody>
+    </sc-raw-table>
+  </div>
+</sc-if>
+
+<!-- PARTS -->
+<sc-if value="{{ is.parts }}" hint-placeholder-val="{{ false }}">
+  <header>
+    <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Catalog · {{ partsCount }} parts</div>
+    <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Parts lookup</h1>
+  </header>
+  <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+    <div style="position:relative;flex:1;min-width:260px;max-width:440px">
+      <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="position:absolute;left:10px;top:10px;color:var(--color-neutral-600)"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <input class="input" placeholder="Part number, name or truck model" value="{{ partQuery }}" sc-camel-on-change="{{ onPartQuery }}" style="padding-left:34px">
+    </div>
+    <button sc-camel-on-click="{{ toggleReman }}" class="btn btn-secondary" style="background:{{ remanBg }};color:{{ remanFg }}">Remanufactured only</button>
+  </div>
+  <div class="blueprint" style="padding:4px 12px 8px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <sc-raw-table class="table">
+      <sc-raw-thead><sc-raw-tr><sc-raw-th>Part no.</sc-raw-th><sc-raw-th>Name</sc-raw-th><sc-raw-th>Fits</sc-raw-th><sc-raw-th style="text-align:right">In stock</sc-raw-th><sc-raw-th style="text-align:right">Price</sc-raw-th><sc-raw-th>Condition</sc-raw-th><sc-raw-th>Catalog</sc-raw-th></sc-raw-tr></sc-raw-thead>
+      <sc-raw-tbody>
+        <sc-for list="{{ partRows }}" as="p" hint-placeholder-count="8">
+          <sc-raw-tr><sc-raw-td style="font-family:ui-monospace,Menlo,monospace;font-size:13px">{{ p.pn }}</sc-raw-td><sc-raw-td style="font-weight:500">{{ p.name }}</sc-raw-td><sc-raw-td style="color:var(--color-neutral-700)">{{ p.fits }}</sc-raw-td><sc-raw-td style="text-align:right">{{ p.stock }}</sc-raw-td><sc-raw-td style="text-align:right">{{ p.price }}</sc-raw-td><sc-raw-td><span class="tag {{ p.tag }}">{{ p.source }}</span></sc-raw-td><sc-raw-td>{{ p.catalog }}</sc-raw-td></sc-raw-tr>
+        </sc-for>
+      </sc-raw-tbody>
+    </sc-raw-table>
+  </div>
+  <p style="margin:0;font-size:13px;color:var(--color-neutral-700);max-width:640px;text-wrap:pretty">Placeholder catalog. Prices and stock are not official Volvo pricing. Remanufactured is a demo label for parts marked reman in the seed data.</p>
+    <sc-if value="{{ partsEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:24px;color:var(--color-neutral-700)">No parts match that search.</div></sc-if>
+</sc-if>
+
+<!-- ANALYTICS -->
+<sc-if value="{{ is.analytics }}" hint-placeholder-val="{{ false }}">
+  <header>
+    <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">ESTIMATE · {{ annualDist }} {{ unit }} planning distance</div>
+    <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Electrification lab</h1>
+    <button class="btn btn-secondary" style="margin-top:12px" sc-camel-on-click="{{ toggleAssumptions }}">Assumptions and sources</button>
+  </header>
+
+  <section class="blueprint" style="padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;align-items:center">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h3 style="margin:0;text-transform:uppercase">Replace diesel units</h3>
+      <div style="font-size:14px;color:var(--color-neutral-700);text-wrap:pretty">ESTIMATE only. Drag to compare demo operating cost and CO₂. This is not measured fleet performance.</div>
+      <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:var(--font-heading);font-weight:600;font-size:64px;line-height:1;color:var(--color-accent-700)">{{ sim.n }}</span><span>of {{ sim.max }} diesel trucks switched</span></div>
+      <input type="range" min="0" max="{{ sim.max }}" value="{{ sim.n }}" sc-camel-on-change="{{ onSim }}" style="width:100%;accent-color:var(--color-accent)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px">
+        <sc-for list="{{ labFields }}" as="f" hint-placeholder-count="5">
+          <label style="display:flex;flex-direction:column;gap:4px;font-size:12px">{{ f.label }}<input class="input" value="{{ f.value }}" sc-camel-on-change="{{ f.onChange }}"></label>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--color-divider)">
+      <sc-for list="{{ sim.out }}" as="o" hint-placeholder-count="4">
+        <div style="padding:16px 18px;border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700)">{{ o.label }}</div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.1">{{ o.value }}</div>
+          <div style="font-size:12px;color:var(--color-accent-700)">{{ o.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px">
+    <section class="blueprint" style="padding:20px;display:flex;flex-direction:column;gap:10px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="margin:0;text-transform:uppercase">CO₂ per model</h3><span style="font-size:12px;color:var(--color-neutral-700)">ESTIMATE g / {{ unit }}</span></div>
+      <sc-for list="{{ modelBars }}" as="b" hint-placeholder-count="10">
+        <div style="display:grid;grid-template-columns:72px minmax(0,1fr) 56px;gap:12px;align-items:center;font-size:13px">
+          <span style="font-weight:500">{{ b.label }}</span>
+          <div style="height:14px;background:var(--color-neutral-200)"><div style="height:100%;width:{{ b.w }};background:{{ b.fill }}"></div></div>
+          <span style="text-align:right;font-variant-numeric:tabular-nums">{{ b.value }}</span>
+        </div>
+      </sc-for>
+    </section>
+    <section class="blueprint" style="padding:20px;display:flex;flex-direction:column;gap:16px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="margin:0;text-transform:uppercase">Annual energy cost</h3><span style="font-size:12px;color:var(--color-neutral-700)">ESTIMATE · one unit</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:end;height:260px;border-bottom:1px solid var(--color-text)">
+        <sc-for list="{{ costCols }}" as="c" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:6px;height:100%">
+            <span style="font-family:var(--font-heading);font-weight:600;font-size:22px;text-align:center">{{ c.value }}</span>
+            <div style="height:{{ c.h }};background:{{ c.fill }}"></div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:-8px">
+        <sc-for list="{{ costCols }}" as="c" hint-placeholder-count="3"><span style="font-size:12px;text-align:center;color:var(--color-neutral-700)">{{ c.label }}</span></sc-for>
+      </div>
+    </section>
+  </div>
+  <sc-if value="{{ showAssumptions }}" hint-placeholder-val="{{ false }}">
+    <section class="blueprint" style="padding:16px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <h3 style="margin:0 0 8px;text-transform:uppercase">Assumptions and sources</h3>
+      <p style="margin:0 0 8px;font-size:13px;color:var(--color-neutral-700)">Every figure in this lab is an estimate. Session edits are not saved on the public demo.</p>
+      <sc-for list="{{ assumptionRows }}" as="a" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:minmax(0,1.4fr) auto minmax(0,1fr);gap:8px;padding:8px 0;border-bottom:1px solid var(--color-divider);font-size:13px"><span>{{ a.label }}</span><span>{{ a.value }} {{ a.unit }}</span><span style="color:var(--color-neutral-700)">{{ a.notes }}</span></div>
+      </sc-for>
+    </section>
+  </sc-if>
+</sc-if>
+
+<!-- FLEET HEALTH -->
+<sc-if value="{{ is.health }}" hint-placeholder-val="{{ false }}">
+  <header style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Rule score · not a prediction</div>
+      <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Fleet health</h1>
+    </div>
+    <div class="seg">
+      <button sc-camel-on-click="{{ sortScore }}" style="padding:8px 12px;border:0;cursor:pointer;background:{{ scoreBg }};color:{{ scoreFg }}">Lowest score</button>
+      <button sc-camel-on-click="{{ sortId }}" style="padding:8px 12px;border:0;border-left:1px solid var(--color-divider);cursor:pointer;background:{{ idBg }};color:{{ idFg }}">Truck ID</button>
+    </div>
+  </header>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+    <sc-for list="{{ healthBands }}" as="b" hint-placeholder-count="3">
+      <div class="blueprint" style="padding:16px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase">{{ b.label }}</div><div style="font-family:var(--font-heading);font-size:36px">{{ b.value }}</div></div>
+    </sc-for>
+  </div>
+  <div class="blueprint" style="padding:8px 12px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <sc-for list="{{ healthRows }}" as="h" hint-placeholder-count="6">
+      <button sc-camel-on-click="{{ h.open }}" style="display:grid;grid-template-columns:88px 72px minmax(0,1fr);gap:12px;width:100%;text-align:left;border:0;border-bottom:1px solid var(--color-divider);background:transparent;padding:12px 4px;font:inherit;color:inherit;cursor:pointer">
+        <span style="font-weight:600;color:var(--color-accent-700)">{{ h.id }}</span>
+        <span><span class="tag {{ h.bandTag }}">{{ h.score }}</span></span>
+        <span style="color:var(--color-neutral-700)">{{ h.band }} · {{ h.model }} · {{ h.status }}</span>
+      </button>
+    </sc-for>
+    <sc-if value="{{ healthEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:24px;color:var(--color-neutral-700)">No vehicles to score.</div></sc-if>
+  </div>
+  <p style="margin:0;font-size:13px;color:var(--color-neutral-700)">Starts at 100. Open repair −20. Open scheduled work or no service record −15. More than 12,000 km in the recent window −10. Workshop status −10. Energy or fuel below 25% −5.</p>
+</sc-if>
+
+<!-- MISSION -->
+<sc-if value="{{ is.mission }}" hint-placeholder-val="{{ false }}">
+  <header>
+    <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">ESTIMATE · distance is typed, not routed</div>
+    <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">Mission planner</h1>
+  </header>
+  <section class="blueprint" style="padding:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <label class="field">Origin<input class="input" value="{{ mission.origin }}" sc-camel-on-change="{{ onOrigin }}"></label>
+    <label class="field">Destination<input class="input" value="{{ mission.destination }}" sc-camel-on-change="{{ onDestination }}"></label>
+    <label class="field">Distance (miles)<input class="input" value="{{ mission.miles }}" sc-camel-on-change="{{ onMiles }}"></label>
+    <div class="field"><label>Payload</label><div class="seg"><sc-for list="{{ payloadFilters }}" as="f" hint-placeholder-count="3"><button sc-camel-on-click="{{ f.pick }}" style="padding:8px 10px;border:0;border-right:1px solid var(--color-divider);cursor:pointer;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</button></sc-for></div></div>
+    <button sc-camel-on-click="{{ toggleRound }}" class="btn btn-secondary" style="background:{{ roundBg }};color:{{ roundFg }}">Round trip</button>
+    <button sc-camel-on-click="{{ toggleCharge }}" class="btn btn-secondary" style="background:{{ chargeBg }};color:{{ chargeFg }}">Charging at destination</button>
+  </section>
+  <p style="margin:0;font-size:13px;color:var(--color-neutral-700)">No vehicle is marked best. Compare cost, emissions, and the planning range yourself. Battery size is a demo assumption, not a Volvo specification.</p>
+  <div class="blueprint" style="padding:4px 12px 8px;overflow-x:auto">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <sc-raw-table class="table">
+      <sc-raw-thead><sc-raw-tr><sc-raw-th>Truck</sc-raw-th><sc-raw-th>Model</sc-raw-th><sc-raw-th>Powertrain</sc-raw-th><sc-raw-th>Est. cost</sc-raw-th><sc-raw-th>Est. CO₂</sc-raw-th><sc-raw-th>Range note</sc-raw-th><sc-raw-th>Constraint</sc-raw-th></sc-raw-tr></sc-raw-thead>
+      <sc-raw-tbody>
+        <sc-for list="{{ missionRows }}" as="m" hint-placeholder-count="6">
+          <sc-raw-tr sc-camel-on-click="{{ m.open }}" style="cursor:pointer"><sc-raw-td>{{ m.id }}</sc-raw-td><sc-raw-td>{{ m.model }}</sc-raw-td><sc-raw-td>{{ m.type }}</sc-raw-td><sc-raw-td>{{ m.cost }}</sc-raw-td><sc-raw-td>{{ m.co2 }}</sc-raw-td><sc-raw-td>{{ m.range }}</sc-raw-td><sc-raw-td>{{ m.charging }}</sc-raw-td></sc-raw-tr>
+        </sc-for>
+      </sc-raw-tbody>
+    </sc-raw-table>
+  </div>
+</sc-if>
+
+<!-- ADD / EDIT -->
+<sc-if value="{{ is.form }}" hint-placeholder-val="{{ false }}">
+  <header>
+    <div style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent-700)">Database · {{ formMode }}</div>
+    <h1 style="margin:4px 0 0;font-size:48px;text-transform:uppercase">{{ formTitle }}</h1>
+  </header>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px;align-items:start">
+    <section class="blueprint" style="padding:24px;display:flex;flex-direction:column;gap:18px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px">
+        <sc-for list="{{ formFields }}" as="f" hint-placeholder-count="6">
+          <div class="field"><label>{{ f.label }}</label><input class="input" value="{{ f.value }}" placeholder="{{ f.ph }}" sc-camel-on-change="{{ f.onChange }}"></div>
+        </sc-for>
+      </div>
+      <div class="field">
+        <label>Type</label>
+        <div class="seg">
+          <sc-for list="{{ formTypes }}" as="t" hint-placeholder-count="3">
+            <button sc-camel-on-click="{{ t.pick }}" style="white-space:nowrap;padding:8px 16px;border:0;border-right:1px solid var(--color-divider);font:13px var(--font-body);cursor:pointer;background:{{ t.bg }};color:{{ t.fg }}">{{ t.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;padding-top:8px;border-top:1px solid var(--color-divider)">
+        <button class="btn btn-secondary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ go.fleet }}">Cancel</button>
+        <button class="btn btn-primary" style="white-space:nowrap;flex:none" sc-camel-on-click="{{ saveForm }}">Save record</button>
+      </div>
+    </section>
+    <aside class="blueprint" style="padding:20px;display:flex;flex-direction:column;gap:10px">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700)">Live estimate</span>
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:40px;line-height:1">{{ formEst.co2 }} <span style="font-size:16px;color:var(--color-neutral-700)">g CO₂/{{ unit }}</span></div>
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:28px;line-height:1">{{ formEst.cost }} <span style="font-size:16px;color:var(--color-neutral-700)">energy/{{ unit }}</span></div>
+      <p style="margin:0;font-size:13px;color:var(--color-accent-700);text-wrap:pretty">{{ formEst.tip }}</p>
+      <p style="margin:0;font-size:13px;color:var(--color-neutral-700)">{{ readOnlyNote }}</p>
+    </aside>
+  </div>
+</sc-if>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;startScreen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dashboard&quot;,&quot;fleet&quot;,&quot;detail&quot;,&quot;map&quot;,&quot;service&quot;,&quot;parts&quot;,&quot;analytics&quot;,&quot;form&quot;],&quot;default&quot;:&quot;dashboard&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;units&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;mi&quot;,&quot;km&quot;],&quot;default&quot;:&quot;mi&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showLearn&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const MODELS = {
+  'FH-E': { make: 'Volvo', model: 'FH', engine: 'Euro 6 step', horsepower: 500, torque: 2000, type: 'Electric' },
+  'FH': { make: 'Volvo', model: 'FH', engine: 'D13TC', horsepower: 660, torque: 1500, type: 'Diesel' },
+  'FH-GAS': { make: 'Volvo', model: 'FH', engine: 'D13TC', horsepower: 500, torque: 2000, type: 'Natural Gas' },
+  'VNR400': { make: 'Volvo', model: 'VNR400', engine: 'D11 or D13', horsepower: 500, torque: 2000, type: 'Diesel' },
+  'VNL': { make: 'Volvo', model: 'VNL', engine: 'Cummins ISX15', horsepower: 425, torque: 2000, type: 'Diesel' },
+  'VHD': { make: 'Volvo', model: 'VHD', engine: 'D13', horsepower: 500, torque: 2000, type: 'Diesel' },
+  'FL': { make: 'Volvo', model: 'FL', engine: 'D6B', horsepower: 250, torque: 2000, type: 'Diesel' },
+  'FE': { make: 'Volvo', model: 'FE', engine: '6-cylinder D8', horsepower: 536, torque: 2000, type: 'Diesel' },
+  'FM': { make: 'Volvo', model: 'FM', engine: 'D11K and D13K', horsepower: 460, torque: 2000, type: 'Diesel' },
+  'FMX': { make: 'Volvo', model: 'FMX', engine: 'D11 step E', horsepower: 540, torque: 2000, type: 'Diesel' },
+};
+const FLEET = [
+  ['VT-0101','FH-E','Active','I-40 · Winston-Salem',36.099,-80.27,41200,72],
+  ['VT-0102','FH-E','Charging','Greensboro depot',36.0726,-79.792,38900,34],
+  ['VT-0103','FH-GAS','Active','US-29 · Reidsville',36.355,-79.665,88400,61],
+  ['VT-0104','FH','Active','I-85 · Charlotte',35.227,-80.843,132600,48],
+  ['VT-0105','VNR400','In service','Greensboro workshop',36.068,-79.812,201300,20],
+  ['VT-0106','VNL','Active','I-40 · Durham',35.994,-78.899,176800,66],
+  ['VT-0107','VHD','Active','Asheboro quarry',35.708,-79.814,94100,55],
+  ['VT-0108','FL','Active','High Point',35.956,-80.005,61500,80],
+  ['VT-0109','FE','Active','Burlington',36.096,-79.438,57300,43],
+  ['VT-0110','FM','Active','I-85 · Salisbury',35.671,-80.474,143900,58],
+  ['VT-0111','FMX','In service','Greensboro workshop',36.075,-79.802,118200,12],
+  ['VT-0112','FH','Active','I-40 · Raleigh',35.779,-78.638,158400,39],
+  ['VT-0113','FH-GAS','Active','Greensboro depot',36.08,-79.785,72300,88],
+  ['VT-0114','VNL','Active','I-77 · Statesville',35.783,-80.887,189500,71],
+];
+const SERVICE = [
+  ['2026-09-19','VT-0105','Repair','Turbocharger replaced (reman unit)',2840,'Open'],
+  ['2026-09-18','VT-0111','Scheduled','Brake pads & rotors, axle 2',1260,'Open'],
+  ['2026-09-15','VT-0102','Inspection','Battery health check — 96% SoH',180,'Closed'],
+  ['2026-09-11','VT-0104','Scheduled','Oil & filter, DPF clean',640,'Closed'],
+  ['2026-09-08','VT-0112','Repair','AdBlue injector fault',910,'Closed'],
+  ['2026-09-02','VT-0103','Scheduled','CNG tank pressure test',420,'Closed'],
+  ['2026-08-28','VT-0101','Inspection','Software update, regen braking tune',0,'Closed'],
+  ['2026-08-21','VT-0106','Scheduled','Oil & filter, coolant flush',720,'Closed'],
+  ['2026-08-14','VT-0110','Repair','Alternator replaced (reman unit)',560,'Closed'],
+  ['2026-08-05','VT-0114','Scheduled','Tyre rotation, alignment',380,'Closed'],
+  ['2026-07-30','VT-0101','Scheduled','Cabin filter, wipers',95,'Closed'],
+];
+const PARTS = [
+  ['21707134','Oil filter','FH, FM, FMX, VNL',84,'$38',false],
+  ['85013870','Turbocharger','FH, FM, VNR400',3,'$1,940',true],
+  ['23443380','Brake pad set','All models',46,'$212',false],
+  ['22327063','AdBlue injector','FH, FM, FMX',9,'$486',false],
+  ['23836012','Alternator 24V','FL, FE, FM',6,'$410',true],
+  ['23456910','HV battery coolant pump','FH-E',4,'$690',false],
+  ['24104521','CNG pressure regulator','FH-GAS',5,'$735',false],
+  ['85003981','Starter motor','FH, VNL, VHD',7,'$380',true],
+  ['21843212','Cabin air filter','All models',120,'$24',false],
+  ['23201774','DPF cartridge','FH, VNL, VHD, VNR400',8,'$1,120',true],
+];
+const CHARGERS = [
+  { name: 'Greensboro depot — demo note', kind: 'EV', lat: 36.068, lng: -79.8 },
+  { name: 'Winston-Salem — demo note', kind: 'EV', lat: 36.11, lng: -80.24 },
+  { name: 'Burlington — demo note', kind: 'CNG', lat: 36.09, lng: -79.45 },
+  { name: 'Raleigh — demo note', kind: 'EV', lat: 35.8, lng: -78.65 },
+];
+const LESSONS = [
+  { kicker: 'Electric 101', title: 'Where does an electric truck get its miles?', body: 'An FH-E stores energy in batteries and recovers some of it every time it brakes downhill. Charging overnight at the depot costs about half of a tank of diesel.', meta: '3 min read · for students' },
+  { kicker: 'Fuel choices', title: 'Natural gas today, biogas tomorrow', body: 'The FH-GAS runs on the same engine family as the diesel FH. Fill it with biogas from farms and landfills and its CO₂ drops by up to 90%.', meta: '4 min read · for fleet owners' },
+  { kicker: 'On the road', title: 'Eco-driving: the free upgrade', body: 'Smooth acceleration, steady speeds and less idling cut fuel use by 5–10% on any truck, no purchase required.', meta: '2 min read · for drivers' },
+];
+const DEFAULT_ASSUMPTIONS = [
+  { key: 'diesel_price', label: 'Diesel price', value: 3.9, unit: 'USD/gal', source_name: 'Demo placeholder', notes: 'Not an official Volvo price.' },
+  { key: 'electricity_price', label: 'Depot electricity', value: 0.11, unit: 'USD/kWh', source_name: 'Demo placeholder', notes: 'Not a utility tariff.' },
+  { key: 'cng_price', label: 'CNG price', value: 2.6, unit: 'USD/GGE', source_name: 'Demo placeholder', notes: 'Not an official fuel contract.' },
+  { key: 'annual_distance_km', label: 'Annual distance', value: 110000, unit: 'km', source_name: 'Demo placeholder', notes: 'Planning distance, not measured utilization.' },
+  { key: 'diesel_mpg', label: 'Diesel fuel economy', value: 6.5, unit: 'mi/gal', source_name: 'Demo placeholder', notes: 'Not a Volvo certification.' },
+  { key: 'cng_mpge', label: 'CNG fuel economy', value: 6, unit: 'mi/GGE', source_name: 'Demo placeholder', notes: 'Placeholder economy.' },
+  { key: 'cng_g_per_km', label: 'CNG CO₂ factor', value: 760, unit: 'g/km', source_name: 'Demo placeholder', notes: 'Not a measured tailpipe result.' },
+  { key: 'ev_kwh_per_km', label: 'Electric energy use', value: 1.15, unit: 'kWh/km', source_name: 'Demo placeholder', notes: 'Before charging losses.' },
+  { key: 'charging_efficiency', label: 'Charging efficiency', value: 0.9, unit: 'ratio', source_name: 'Demo placeholder', notes: 'Share of grid energy that reaches the battery in this model.' },
+  { key: 'grid_g_per_kwh', label: 'Grid emissions factor', value: 350, unit: 'g/kWh', source_name: 'Demo placeholder', notes: 'Not a measured grid factor.' },
+  { key: 'diesel_kg_co2_per_gal', label: 'Diesel combustion CO₂', value: 10.2, unit: 'kg/gal', source_name: 'Demo placeholder', notes: 'Estimate input only.' },
+  { key: 'demo_battery_kwh', label: 'Planning battery size', value: 540, unit: 'kWh', source_name: 'Demo placeholder', notes: 'Not a published Volvo pack size.' },
+  { key: 'payload_heavy', label: 'Heavy payload factor', value: 1.15, unit: 'ratio', source_name: 'Demo placeholder', notes: 'Not a measured payload curve.' },
+  { key: 'payload_light', label: 'Light payload factor', value: 0.9, unit: 'ratio', source_name: 'Demo placeholder', notes: 'Not a measured payload curve.' },
+];
+const DEMO_PARAMS = [
+  { parameter_id: 'sim.odometer', name: 'Odometer', parameter_type: 'single', unit: 'km', fits: 'All' },
+  { parameter_id: 'sim.energy_level', name: 'Energy level', parameter_type: 'single', unit: 'percent', fits: 'Electric' },
+  { parameter_id: 'sim.fuel_level', name: 'Fuel level', parameter_type: 'single', unit: 'percent', fits: 'Fuel' },
+  { parameter_id: 'sim.position', name: 'Position', parameter_type: 'struct', unit: 'degrees', fits: 'All' },
+];
+const TYPE_TAG = { Electric: 'tag-accent', 'Natural Gas': 'tag-outline', Diesel: 'tag-neutral' };
+const STATUS_TAG = { Active: 'tag-accent', Charging: 'tag-outline', 'In service': 'tag-neutral' };
+const KM_PER_MI = 1.60934;
+const EMPTY_FORM = { id: '', key: '', engine: '', horsepower: '', torque: '', loc: '', type: 'Diesel' };
+const fromRow = r => ({ id: r.id, key: r.model_key, status: r.status, loc: r.loc, lat: null, lng: null, odo: r.odo, level: r.level, source: 'simulated', vin: 'SIM-' + r.id, modelYear: null, updatedAt: null, spec: { make: r.make, model: r.model, engine: r.engine, horsepower: r.horsepower, torque: r.torque, type: r.type } });
+const vehicleToTruck = v => {
+  const reading = v.latestReading || {};
+  const type = v.powertrain || 'Diesel';
+  return { id: v.vehicleId, key: v.modelKey || v.model, status: reading.operationalStatus || 'Active', loc: v.locationLabel || '', lat: reading.latitude, lng: reading.longitude, odo: reading.odometerKm || 0, level: reading.energyLevelPercent ?? reading.fuelLevelPercent ?? 0, source: v.source || 'simulated', vin: v.vin, modelYear: v.modelYear, updatedAt: reading.timestamp, spec: { make: v.make || 'Volvo', model: v.model, engine: v.engine, horsepower: v.horsepower, torque: v.torque, type } };
+};
+function assumptionValues(rows, overrides) {
+  const map = {};
+  DEFAULT_ASSUMPTIONS.forEach(row => { map[row.key] = Number(row.value); });
+  (rows || []).forEach(row => { const n = Number(row.value); if (row.key && Number.isFinite(n)) map[row.key] = n; });
+  Object.entries(overrides || {}).forEach(([key, value]) => { const n = Number(value); if (Number.isFinite(n)) map[key] = n; });
+  return map;
+}
+function payloadFactor(map, category) { return category === 'Heavy' ? map.payload_heavy : category === 'Light' ? map.payload_light : 1; }
+function roundEstimate(n) { return Math.round(n * 10) / 10; }
+function tripEstimate(powertrain, miles, map, payload, roundTrip) {
+  const distanceMi = Math.max(0, Number(miles) || 0) * (roundTrip ? 2 : 1);
+  const distanceKm = distanceMi * KM_PER_MI;
+  const factor = payloadFactor(map, payload);
+  if (powertrain === 'Electric') {
+    const kwh = distanceKm * map.ev_kwh_per_km * factor / map.charging_efficiency;
+    return { costUsd: roundEstimate(kwh * map.electricity_price), co2Kg: roundEstimate(kwh * map.grid_g_per_kwh / 1000), energyKwh: roundEstimate(kwh), distanceKm };
+  }
+  if (powertrain === 'Natural Gas') {
+    const gge = distanceMi / map.cng_mpge * factor;
+    return { costUsd: roundEstimate(gge * map.cng_price), co2Kg: roundEstimate(distanceKm * map.cng_g_per_km / 1000), fuelGge: roundEstimate(gge), distanceKm };
+  }
+  const gallons = distanceMi / map.diesel_mpg * factor;
+  return { costUsd: roundEstimate(gallons * map.diesel_price), co2Kg: roundEstimate(gallons * map.diesel_kg_co2_per_gal), fuelGal: roundEstimate(gallons), distanceKm };
+}
+function gramsPerKm(type, map) {
+  const annual = tripEstimate(type, map.annual_distance_km / KM_PER_MI, map, 'Medium', false);
+  return map.annual_distance_km ? (annual.co2Kg * 1000) / map.annual_distance_km : 0;
+}
+function demoReadings(truck) {
+  const days = [90, 75, 60, 45, 30, 21, 14, 7, 0];
+  const anchor = Date.parse('2026-09-24T14:00:00Z');
+  return days.map((daysAgo, index) => {
+    const latest = index === days.length - 1;
+    const level = latest ? truck.level : Math.max(8, Math.min(100, truck.level + Math.round(Math.sin(index * 1.3) * 8)));
+    const electric = truck.spec.type === 'Electric';
+    return { timestamp: new Date(anchor - daysAgo * 86400000).toISOString(), odometerKm: Math.round(truck.odo - daysAgo * (110000 / 365)), energyLevelPercent: electric ? level : null, fuelLevelPercent: electric ? null : level, latitude: truck.lat, longitude: truck.lng, operationalStatus: latest ? truck.status : 'Active', source: 'simulated', vehicle_id: truck.id };
+  });
+}
+function localHealth(truck, readings, serviceRows) {
+  const reasons = [];
+  let score = 100;
+  const mine = serviceRows.filter(row => row[1] === truck.id);
+  const openRepair = mine.find(row => row[2] === 'Repair' && row[5] === 'Open');
+  if (openRepair) { score -= 20; reasons.push({ delta: -20, text: 'Open repair: ' + openRepair[3] }); }
+  const openScheduled = mine.find(row => row[2] === 'Scheduled' && row[5] === 'Open');
+  if (openScheduled) { score -= 15; reasons.push({ delta: -15, text: 'Open scheduled work: ' + openScheduled[3] }); }
+  else {
+    const closed = mine.filter(row => row[5] === 'Closed' && row[0]);
+    const newest = closed.map(row => Date.parse(row[0])).filter(n => Number.isFinite(n)).sort((a, b) => b - a)[0];
+    if (!newest || Date.now() - newest > 90 * 24 * 60 * 60 * 1000) {
+      score -= 15;
+      reasons.push({ delta: -15, text: newest ? 'No completed service in the last 90 days' : 'No service record on file' });
+    }
+  }
+  if (truck.level < 25) { score -= 5; reasons.push({ delta: -5, text: 'Low energy or fuel state (' + truck.level + '%)' }); }
+  if (truck.status === 'In service') { score -= 10; reasons.push({ delta: -10, text: 'Unit is in the workshop' }); }
+  const history = readings || [];
+  if (history.length > 1) {
+    const newest = history[history.length - 1];
+    const cutoff = Date.parse(newest.timestamp) - 30 * 86400000;
+    const older = history.slice().reverse().find(reading => Date.parse(reading.timestamp) <= cutoff) || history[0];
+    const delta = Number(newest.odometerKm) - Number(older.odometerKm);
+    if (delta > 12000) { score -= 10; reasons.push({ delta: -10, text: Math.round(delta).toLocaleString('en-US') + ' km across this reading history' }); }
+  }
+  score = Math.max(0, Math.min(100, score));
+  return { vehicleId: truck.id, score, band: score >= 80 ? 'Healthy' : score >= 60 ? 'Attention' : 'Service Required', reasons };
+}
+function project(lat, lng) {
+  const x = (Number(lng) - (-81.05)) / ((-78.4) - (-81.05)) * 100;
+  const y = (36.5 - Number(lat)) / (36.5 - 35.1) * 100;
+  return { x: Math.min(96, Math.max(4, x)).toFixed(1) + '%', y: Math.min(94, Math.max(6, y)).toFixed(1) + '%' };
+}
+function spark(values) {
+  const nums = values.map(Number).filter(n => Number.isFinite(n));
+  if (!nums.length) return '';
+  const min = Math.min.apply(null, nums);
+  const max = Math.max.apply(null, nums);
+  return nums.map((v, i) => {
+    const x = nums.length === 1 ? 0 : (i / (nums.length - 1)) * 320;
+    const y = max === min ? 40 : 76 - ((v - min) / (max - min)) * 72;
+    return x.toFixed(1) + ',' + y.toFixed(1);
+  }).join(' ');
+}
+
+class Component extends DCLogic {
+  state = {
+    screen: this.props.startScreen ?? 'dashboard',
+    sel: 'VT-0101', mapSel: 'VT-0101',
+    query: '', typeFilter: 'All', svcFilter: 'All',
+    partQuery: '', remanOnly: false, sim: 4,
+    extra: [], form: { ...EMPTY_FORM }, editing: false,
+    lab: {}, mission: { origin: 'Greensboro', destination: 'Charlotte', miles: '94', payload: 'Medium', roundTrip: true, charging: false },
+    rangeDays: 30, healthSort: 'score', showAssumptions: false, readOnlyNote: '', loading: false,
+  };
+  api() { try { return (this.props.apiBase || window.VTDB_API || new URLSearchParams(location.search).get('api') || '').replace(/\/$/, ''); } catch (e) { return ''; } }
+  async loadDetail(id) {
+    const api = this.api();
+    if (!api || !id) return;
+    try {
+      const [readingsRes, healthRes] = await Promise.all([
+        fetch(api + '/api/vehicles/' + encodeURIComponent(id) + '/readings?range=90d'),
+        fetch(api + '/api/vehicles/' + encodeURIComponent(id) + '/health'),
+      ]);
+      if (!readingsRes.ok) return;
+      const readingsJson = await readingsRes.json();
+      const healthJson = healthRes.ok ? await healthRes.json() : null;
+      this.setState({ readingsById: { ...(this.state.readingsById || {}), [id]: readingsJson.readings || [] }, healthById: { ...(this.state.healthById || {}), [id]: healthJson } });
+    } catch (e) { console.warn(e); }
+  }
+  async componentDidMount() {
+    const api = this.api();
+    if (!api) return;
+    this.setState({ loading: true });
+    const get = async (p) => { const res = await fetch(api + p); if (!res.ok) throw new Error(String(res.status)); return res.json(); };
+    try {
+      let vehicles = null;
+      try { vehicles = await get('/api/vehicles'); } catch (e) { vehicles = null; }
+      const [sv, pt] = await Promise.all([get('/api/service'), get('/api/parts')]);
+      const svc = sv.map(x => [x.date, x.truck_id, x.kind, x.descr, x.cost, x.status]);
+      const parts = pt.map(p => [p.pn, p.name, p.fits, p.stock, p.price, !!p.reman]);
+      if (!vehicles) {
+        const trucks = await get('/api/trucks');
+        this.setState({ remote: trucks.map(fromRow), svc, parts, online: true, loading: false, sourceMode: 'simulated' });
+        return;
+      }
+      const [assumptions, health, analytics] = await Promise.all([
+        get('/api/assumptions').catch(() => null),
+        get('/api/fleet/health').catch(() => null),
+        get('/api/fleet/analytics').catch(() => null),
+      ]);
+      this.setState({
+        vehicles, remote: vehicles.map(vehicleToTruck), extra: [], svc, parts,
+        assumptions, healthFleet: health && health.vehicles, energyTrend: analytics && analytics.energyTrend,
+        online: true, loading: false, sourceMode: vehicles.some(v => v.source === 'volvo') ? 'volvo' : 'simulated',
+      });
+      this.loadDetail(this.state.sel);
+    } catch (e) {
+      console.warn('VTDB API unreachable — using demo data', e);
+      this.setState({ loading: false, online: false });
+    }
+  }
+  trucks() {
+    const demo = FLEET.map(([id, key, status, loc, lat, lng, odo, level]) => ({ id, key, status, loc, lat, lng, odo, level, source: 'simulated', vin: 'SIM-' + id, modelYear: 2026, updatedAt: '2026-09-24T14:00:00Z', spec: MODELS[key] }));
+    return (this.state.remote || demo).concat(this.state.extra);
+  }
+  renderVals() {
+    const s = this.state, set = p => this.setState(p);
+    const SV = s.svc || SERVICE, PT = s.parts || PARTS;
+    const mi = (this.props.units ?? 'mi') === 'mi';
+    const unit = mi ? 'mi' : 'km';
+    const perD = v => mi ? v * KM_PER_MI : v;
+    const dist = v => Math.round(mi ? v / KM_PER_MI : v);
+    const fmt = n => Math.round(n).toLocaleString('en-US');
+    const money = n => '$' + Math.round(n).toLocaleString('en-US');
+    const trucks = this.trucks();
+    const map = assumptionValues(s.assumptions, s.lab);
+    const open = id => () => { set({ sel: id, screen: 'detail' }); this.loadDetail(id); };
+    const screens = ['dashboard', 'fleet', 'health', 'map', 'service', 'parts', 'analytics', 'mission'];
+    const navKey = s.screen === 'detail' || s.screen === 'form' ? 'fleet' : s.screen;
+    const nav = {}; const go = {};
+    screens.forEach(k => { nav[k] = { bg: navKey === k ? 'var(--color-accent-100)' : 'transparent', fg: navKey === k ? 'var(--color-accent-800)' : 'var(--color-text)' }; go[k] = () => set({ screen: k }); });
+    go.add = () => set({ screen: 'form', editing: false, form: { ...EMPTY_FORM }, readOnlyNote: '' });
+    go.edit = () => { const t = trucks.find(x => x.id === s.sel); if (!t) return; set({ screen: 'form', editing: true, readOnlyNote: '', form: { id: t.id, key: t.key, engine: t.spec.engine, horsepower: String(t.spec.horsepower), torque: String(t.spec.torque), loc: t.loc, type: t.spec.type } }); };
+    const is = { dashboard: s.screen === 'dashboard', fleet: s.screen === 'fleet', detail: s.screen === 'detail', map: s.screen === 'map', service: s.screen === 'service', parts: s.screen === 'parts', analytics: s.screen === 'analytics', form: s.screen === 'form', health: s.screen === 'health', mission: s.screen === 'mission' };
+    const row = t => ({ ...t, ...t.spec, model: t.key, type: t.spec.type, typeTag: TYPE_TAG[t.spec.type] || 'tag-neutral', statusTag: STATUS_TAG[t.status] || 'tag-neutral', co2: fmt(Math.round(perD(gramsPerKm(t.spec.type, map)))), open: open(t.id) });
+    const fills = { Electric: 'var(--color-accent)', 'Natural Gas': 'var(--color-accent-300)', Diesel: 'var(--color-neutral-700)' };
+    const byType = ['Electric', 'Natural Gas', 'Diesel'].map(ty => { const g = trucks.filter(t => t.spec.type === ty); return { ty, g, avg: gramsPerKm(ty, map) }; });
+    const maxAvg = Math.max.apply(null, byType.map(b => b.avg).concat(1));
+    const powerBars = byType.map(b => ({ label: b.ty, count: b.g.length, w: (b.avg / maxAvg * 100) + '%', fill: fills[b.ty], value: fmt(Math.round(perD(b.avg))) }));
+    const clean = trucks.filter(t => t.spec.type !== 'Diesel').length;
+    const readingsFor = t => {
+      const live = s.readingsById && s.readingsById[t.id];
+      return (live && live.length) ? live : demoReadings(t);
+    };
+    const healthFor = t => {
+      const live = s.healthById && s.healthById[t.id];
+      if (live && live.reasons) return live;
+      const fleetScore = (s.healthFleet || []).find(h => h.vehicleId === t.id);
+      if (fleetScore) return fleetScore;
+      return localHealth(t, readingsFor(t), SV);
+    };
+    let healthRows = trucks.map(t => ({ ...healthFor(t), id: t.id, model: t.key, status: t.status, open: open(t.id), bandTag: healthFor(t).band === 'Healthy' ? 'tag-accent' : healthFor(t).band === 'Attention' ? 'tag-outline' : 'tag-neutral' }));
+    healthRows = healthRows.slice().sort((a, b) => s.healthSort === 'id' ? a.id.localeCompare(b.id) : a.score - b.score);
+    const bandCount = name => healthRows.filter(h => h.band === name).length;
+    const avgHealth = healthRows.length ? Math.round(healthRows.reduce((sum, h) => sum + h.score, 0) / healthRows.length) : 0;
+    const operational = trucks.filter(t => t.status === 'Active' || t.status === 'Charging').length;
+    const inService = trucks.filter(t => t.status === 'In service').length;
+    const openOrders = SV.filter(r => r[5] === 'Open').length;
+    const annualFleetCost = trucks.reduce((sum, t) => sum + tripEstimate(t.spec.type, map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd, 0);
+    const kpis = [
+      { label: 'Total fleet', value: trucks.length, unit: '', note: 'Demo units in this portfolio' },
+      { label: 'Operational', value: operational, unit: '', note: 'Active or charging' },
+      { label: 'Needs attention', value: healthRows.filter(h => h.band !== 'Healthy').length, unit: '', note: 'Rule score below Healthy' },
+      { label: 'In service', value: inService, unit: '', note: 'In the workshop' },
+      { label: 'Low-carbon fleet', value: Math.round(clean / trucks.length * 100), unit: '%', note: clean + ' electric or gas units' },
+      { label: 'Est. annual energy', value: money(annualFleetCost), unit: '', note: 'ESTIMATE · not a bill' },
+      { label: 'Open work orders', value: openOrders, unit: '', note: 'From the service log' },
+      { label: 'Average fleet health', value: avgHealth, unit: '', note: 'Explained on Fleet Health' },
+    ];
+    const alerts = [
+      { title: 'Turbo repair in progress', sub: 'Greensboro workshop · open repair', unitId: 'VT-0105', dot: 'var(--color-neutral-800)', open: open('VT-0105') },
+      { title: 'Battery at 34% — charging', sub: 'Demo state of charge, not a live charger', unitId: 'VT-0102', dot: 'var(--color-accent)', open: open('VT-0102') },
+      { title: 'Brake service open', sub: 'Scheduled work still open', unitId: 'VT-0111', dot: 'var(--color-neutral-800)', open: open('VT-0111') },
+      { title: 'Highest diesel CO₂ estimate', sub: 'ESTIMATE · see Electrification Lab', unitId: 'VT-0104', dot: 'var(--color-accent-300)', open: open('VT-0104') },
+    ];
+    const q = s.query.trim().toLowerCase();
+    const fleetRows = trucks.filter(t => (s.typeFilter === 'All' || t.spec.type === s.typeFilter) && (!q || [t.id, t.key, t.spec.engine, t.loc, t.spec.type, t.vin].join(' ').toLowerCase().includes(q))).map(row);
+    const seg = (opts, cur, key) => opts.map(o => ({ label: o, bg: cur === o ? 'var(--color-accent)' : 'transparent', fg: cur === o ? 'var(--color-bg)' : 'var(--color-text)', pick: () => set({ [key]: o }) }));
+    const st = trucks.find(t => t.id === s.sel) || trucks[0];
+    const sr = row(st);
+    const svc = r => ({ date: r[0], unit: r[1], kind: r[2], desc: r[3], cost: r[4] ? '$' + fmt(r[4]) : '—', status: r[5], tag: r[5] === 'Open' ? 'tag-outline' : 'tag-neutral', model: (trucks.find(t => t.id === r[1]) || {}).key || '—', open: open(r[1]), impact: r[5] === 'Open' && r[2] === 'Repair' ? '−20 health' : r[5] === 'Open' && r[2] === 'Scheduled' ? '−15 health' : 'Recorded' });
+    const hist = SV.filter(r => r[1] === st.id).map(svc);
+    const selectedHealth = healthFor(st);
+    const selectedReadings = readingsFor(st).filter(reading => Date.parse('2026-09-24T14:00:00Z') - Date.parse(reading.timestamp) <= s.rangeDays * 86400000);
+    const levelSeries = selectedReadings.map(reading => reading.energyLevelPercent ?? reading.fuelLevelPercent);
+    const grams = gramsPerKm(st.spec.type, map);
+    const annual = tripEstimate(st.spec.type, map.annual_distance_km / KM_PER_MI, map, 'Medium', false);
+    const dieselAnnual = tripEstimate('Diesel', map.annual_distance_km / KM_PER_MI, map, 'Medium', false);
+    const sel = {
+      ...sr, odo: fmt(dist(st.odo)), vin: st.vin || ('SIM-' + st.id),
+      sourceLabel: (st.source === 'volvo') ? 'VOLVO BASIC VEHICLE INFORMATION API' : 'SIMULATED DATA',
+      updatedLabel: (st.source === 'volvo') ? 'Last synchronized ' + (st.updatedAt || '—') : 'Last simulated update ' + (st.updatedAt || '2026-09-24'),
+      healthScore: selectedHealth.score, healthBand: selectedHealth.band,
+      healthReasons: selectedHealth.reasons.length ? selectedHealth.reasons : [{ delta: 0, text: 'No penalties. Score stays at 100.' }],
+      specs: [['Make', st.spec.make], ['Model', st.spec.model], ['Year', st.modelYear || '—'], ['VIN', st.vin || ('SIM-' + st.id)], ['Engine', st.spec.engine], ['Horsepower', st.spec.horsepower + ' hp'], ['Torque', fmt(st.spec.torque) + ' Nm'], ['Source', st.source || 'simulated']].map(([k, v]) => ({ k, v })),
+      eco: [
+        { label: 'ESTIMATE · CO₂ per ' + unit, value: fmt(Math.round(perD(grams))) + ' g', note: 'From the assumptions panel, not a certified test' },
+        { label: 'ESTIMATE · energy cost / yr', value: money(annual.costUsd), note: st.spec.type === 'Electric' ? 'Uses the demo electricity price' : 'Uses the demo fuel price' },
+        st.spec.type === 'Diesel'
+          ? { label: 'ESTIMATE · vs electric', value: money(annual.costUsd - tripEstimate('Electric', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd) + '/yr', note: 'Operating-cost difference only' }
+          : { label: 'ESTIMATE · vs diesel', value: fmt((dieselAnnual.co2Kg - annual.co2Kg) / 1000) + ' t/yr', note: 'CO₂ difference under the demo factors' },
+      ],
+      history: hist.length ? hist : [{ date: '—', kind: '—', desc: 'No records yet', cost: '', status: '—', tag: 'tag-neutral', impact: '' }],
+      odoPoints: spark(selectedReadings.map(reading => reading.odometerKm)),
+      levelPoints: spark(levelSeries),
+      levelName: st.spec.type === 'Electric' ? 'Energy %' : 'Fuel %',
+      hasChart: selectedReadings.length > 1,
+      parameters: (s.parameters || DEMO_PARAMS).filter(p => p.fits === 'All' || (p.fits === 'Electric' && st.spec.type === 'Electric') || (p.fits === 'Fuel' && st.spec.type !== 'Electric') || !p.fits).map(p => ({ id: p.parameter_id || p.parameterId, name: p.name, type: p.parameter_type || p.parameterType, unit: p.unit || '' })),
+    };
+    const placed = trucks.filter(t => t.lat != null && t.lng != null);
+    const mapDots = placed.map(t => { const pos = project(t.lat, t.lng); return { id: t.id, x: pos.x, y: pos.y, size: t.id === s.mapSel ? '18px' : '12px', fill: fills[t.spec.type], ring: t.id === s.mapSel ? 'var(--color-accent-800)' : 'var(--color-bg)', pick: () => set({ mapSel: t.id }) }; });
+    const ms = trucks.find(t => t.id === s.mapSel) || trucks[0];
+    const mapSel = { ...row(ms), levelLabel: ms.spec.type === 'Electric' ? 'Battery' : 'Fuel', open: open(ms.id), odoText: fmt(dist(ms.odo)) + ' ' + unit, updated: ms.updatedAt ? String(ms.updatedAt).slice(0, 16).replace('T', ' ') : 'simulated', coords: ms.lat != null ? Number(ms.lat).toFixed(3) + ', ' + Number(ms.lng).toFixed(3) : 'No coordinates' };
+    const chargers = CHARGERS.map(c => ({ ...c, ...project(c.lat, c.lng) }));
+    const svcRows = SV.filter(r => s.svcFilter === 'All' || r[2] === s.svcFilter).map(svc);
+    const spend = SV.reduce((sum, r) => sum + Number(r[4] || 0), 0);
+    const svcStats = [
+      { label: 'Open work orders', value: openOrders, note: inService + ' units in the workshop' },
+      { label: 'Scheduled still open', value: SV.filter(r => r[2] === 'Scheduled' && r[5] === 'Open').length, note: 'Counts as −15 health' },
+      { label: 'Logged cost', value: '$' + fmt(spend), note: 'Placeholder workshop costs' },
+    ];
+    const pq = s.partQuery.trim().toLowerCase();
+    const partRows = PT.filter(p => (!s.remanOnly || p[5]) && (!pq || (p[0] + ' ' + p[1] + ' ' + p[2]).toLowerCase().includes(pq))).map(p => ({ pn: p[0], name: p[1], fits: p[2], stock: p[3], price: p[4], source: p[5] ? 'Remanufactured' : 'New', tag: p[5] ? 'tag-accent' : 'tag-neutral', catalog: 'Placeholder' }));
+    const dieselTrucks = trucks.filter(t => t.spec.type === 'Diesel');
+    const n = Math.min(s.sim, dieselTrucks.length);
+    const switched = dieselTrucks.slice(0, n);
+    const dieselCost = switched.reduce((sum, t) => sum + tripEstimate('Diesel', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd, 0);
+    const electricCost = switched.reduce((sum, t) => sum + tripEstimate('Electric', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd, 0);
+    const dieselCo2 = switched.reduce((sum, t) => sum + tripEstimate('Diesel', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).co2Kg, 0);
+    const electricCo2 = switched.reduce((sum, t) => sum + tripEstimate('Electric', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).co2Kg, 0);
+    const sim = { n, max: dieselTrucks.length, out: [
+      { label: 'ESTIMATE · diesel cost / yr', value: money(dieselCost), note: 'Fuel only, for the units being replaced' },
+      { label: 'ESTIMATE · electric cost / yr', value: money(electricCost), note: 'Energy only, after charging efficiency' },
+      { label: 'ESTIMATE · cost difference', value: money(dieselCost - electricCost), note: 'Diesel minus electric. Not a purchase case.' },
+      { label: 'ESTIMATE · CO₂ difference', value: fmt((dieselCo2 - electricCo2) / 1000) + ' t', note: 'Positive means the estimate is lower on electric' },
+    ] };
+    const modelRanks = Object.keys(MODELS).map(k => ({ k, v: gramsPerKm(MODELS[k].type, map), t: MODELS[k].type })).sort((a, b) => b.v - a.v);
+    const mMax = modelRanks[0].v || 1;
+    const modelBars = modelRanks.map(m => ({ label: m.k, w: (m.v / mMax * 100) + '%', fill: fills[m.t], value: fmt(Math.round(perD(m.v))) }));
+    const costCols = [['Diesel', tripEstimate('Diesel', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd, fills.Diesel], ['Natural gas', tripEstimate('Natural Gas', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd, fills['Natural Gas']], ['Electric', tripEstimate('Electric', map.annual_distance_km / KM_PER_MI, map, 'Medium', false).costUsd, fills.Electric]];
+    const costMax = Math.max.apply(null, costCols.map(c => c[1]));
+    const costColsView = costCols.map(([label, v, fill]) => ({ label, fill, value: money(v), h: (v / costMax * 85) + '%' }));
+    const f = s.form;
+    const upd = k => e => set({ form: { ...s.form, [k]: e.target.value } });
+    const formFields = [['Truck ID', 'id', 'VT-0115'], ['Model', 'key', 'e.g. FH-E'], ['Engine', 'engine', 'e.g. D13TC'], ['Horsepower', 'horsepower', '500'], ['Torque (Nm)', 'torque', '2000'], ['Home location', 'loc', 'Greensboro depot']].map(([label, k, ph]) => ({ label, ph, value: f[k], onChange: upd(k) }));
+    const formTypes = seg(['Diesel', 'Natural Gas', 'Electric'], f.type, '_').map(o => ({ ...o, pick: () => set({ form: { ...s.form, type: o.label } }) }));
+    const formAnnual = tripEstimate(f.type, map.annual_distance_km / KM_PER_MI, map, 'Medium', false);
+    const formEst = { co2: fmt(Math.round(perD(gramsPerKm(f.type, map)))), cost: money(formAnnual.costUsd), tip: 'ESTIMATE from the demo assumptions. The public site does not treat this as measured performance.' };
+    const saveForm = () => {
+      const id = (f.id || '').trim() || ('VT-' + String(115 + s.extra.length).padStart(4, '0'));
+      const spec = { make: 'Volvo', model: f.key || 'FH', engine: f.engine || '—', horsepower: +f.horsepower || 0, torque: +f.torque || 0, type: f.type };
+      const api = this.api();
+      const note = 'The public demo is read-only, so this record stays in this browser session.';
+      if (api) {
+        fetch(api + '/api/trucks' + (s.editing ? '/' + encodeURIComponent(id) : ''), { method: s.editing ? 'PUT' : 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, model_key: f.key || 'FH', ...spec, status: 'Active', loc: f.loc || 'Greensboro depot' }) })
+          .then(res => { if (res.status === 403) this.setState({ readOnlyNote: note }); else if (res.ok) this.componentDidMount(); })
+          .catch(e => console.warn(e));
+      }
+      if (s.editing) { set({ screen: 'detail', readOnlyNote: note }); return; }
+      set({ extra: [...s.extra, { id, key: f.key || 'FH', status: 'Active', loc: f.loc || 'Greensboro depot', lat: 36.07, lng: -79.79, odo: 0, level: 100, source: 'simulated', vin: 'SIM-' + id, modelYear: 2026, updatedAt: new Date().toISOString(), spec }], sel: id, screen: 'detail', readOnlyNote: note });
+    };
+    const labFields = ['diesel_price', 'electricity_price', 'annual_distance_km', 'charging_efficiency', 'grid_g_per_kwh'].map(key => {
+      const found = DEFAULT_ASSUMPTIONS.find(row => row.key === key);
+      return { key, label: found.label, unit: found.unit, value: map[key], onChange: e => set({ lab: { ...s.lab, [key]: e.target.value } }) };
+    });
+    const assumptionRows = DEFAULT_ASSUMPTIONS.map(row => ({ ...row, value: map[row.key], source: row.source_name }));
+    const mission = s.mission;
+    const setMission = (key, value) => set({ mission: { ...s.mission, [key]: value } });
+    const missionRows = trucks.map(t => {
+      const estimate = tripEstimate(t.spec.type, mission.miles, map, mission.payload, mission.roundTrip);
+      const rangeKm = t.spec.type === 'Electric' ? (t.level / 100) * map.demo_battery_kwh / map.ev_kwh_per_km : null;
+      const chargingRequired = t.spec.type === 'Electric' && rangeKm != null && estimate.distanceKm > rangeKm;
+      return { id: t.id, model: t.key, type: t.spec.type, cost: money(estimate.costUsd), co2: fmt(estimate.co2Kg) + ' kg', range: rangeKm == null ? 'Fuel stop assumed' : fmt(rangeKm / KM_PER_MI) + ' ' + unit + ' planning range', charging: t.spec.type !== 'Electric' ? 'Not electric' : chargingRequired ? (mission.charging ? 'Destination charge assumed' : 'Exceeds planning range') : 'Within planning range', open: open(t.id) };
+    });
+    const trendSource = (s.energyTrend && s.energyTrend.length) ? s.energyTrend.map(row => row.level) : (trucks[0] ? readingsFor(trucks[0]).map(reading => reading.energyLevelPercent ?? reading.fuelLevelPercent) : []);
+    const recentService = SV.slice().sort((a, b) => String(b[0]).localeCompare(String(a[0]))).slice(0, 4).map(svc);
+    const sourceVolvo = s.sourceMode === 'volvo';
+    const sourceTitle = sourceVolvo ? 'Volvo Connected' : 'Demo Fleet';
+    const dataSource = s.loading ? 'Checking the live API…' : sourceVolvo ? 'Authorized Basic Vehicle Information API data' : (s.online ? 'Simulated connected-vehicle data · ' + trucks.length + ' units' : 'Simulated connected-vehicle data · offline demo');
+    return {
+      dataSource, sourceTitle, sourceDot: sourceVolvo ? 'var(--color-accent-800)' : 'var(--color-accent)',
+      is, nav, go, unit, showLearn: this.props.showLearn ?? true,
+      kpis, powerBars, alerts, lessons: LESSONS, healthBands: [
+        { label: 'Healthy', value: bandCount('Healthy') },
+        { label: 'Attention', value: bandCount('Attention') },
+        { label: 'Service Required', value: bandCount('Service Required') },
+      ],
+      recentService, energyPoints: spark(trendSource), energyNote: 'ESTIMATE of stored demo levels. Not a live sensor feed.',
+      elexSnapshot: sim.out[2].value + ' cost difference if ' + n + ' diesel units are replaced',
+      query: s.query, onQuery: e => set({ query: e.target.value }), typeFilters: seg(['All', 'Electric', 'Natural Gas', 'Diesel'], s.typeFilter, 'typeFilter'),
+      fleetRows, fleetEmpty: fleetRows.length === 0, fleetCount: fleetRows.length, totalCount: trucks.length,
+      sel, chargers, mapDots, mapSel, mapEmpty: mapDots.length === 0,
+      svcFilters: seg(['All', 'Scheduled', 'Repair', 'Inspection'], s.svcFilter, 'svcFilter'), svcRows, svcStats,
+      partQuery: s.partQuery, onPartQuery: e => set({ partQuery: e.target.value }), partRows, partsCount: PT.length, partsEmpty: partRows.length === 0,
+      toggleReman: () => set({ remanOnly: !s.remanOnly }), remanBg: s.remanOnly ? 'var(--color-accent)' : 'transparent', remanFg: s.remanOnly ? 'var(--color-bg)' : 'var(--color-text)',
+      sim, onSim: e => set({ sim: +e.target.value }), modelBars, costCols: costColsView, annualDist: fmt(dist(map.annual_distance_km)),
+      formFields, formTypes, formEst, saveForm, formMode: s.editing ? 'Edit ' + f.id : 'New record', formTitle: s.editing ? 'Edit truck' : 'Add a truck', readOnlyNote: s.readOnlyNote,
+      healthRows, healthEmpty: healthRows.length === 0, sortScore: () => set({ healthSort: 'score' }), sortId: () => set({ healthSort: 'id' }),
+      scoreBg: s.healthSort === 'score' ? 'var(--color-accent)' : 'transparent', scoreFg: s.healthSort === 'score' ? 'var(--color-bg)' : 'var(--color-text)',
+      idBg: s.healthSort === 'id' ? 'var(--color-accent)' : 'transparent', idFg: s.healthSort === 'id' ? 'var(--color-bg)' : 'var(--color-text)',
+      ranges: [7, 14, 30, 90].map(days => ({ label: days + 'D', bg: s.rangeDays === days ? 'var(--color-accent)' : 'transparent', fg: s.rangeDays === days ? 'var(--color-bg)' : 'var(--color-text)', pick: () => set({ rangeDays: days }) })),
+      labFields, assumptionRows, showAssumptions: s.showAssumptions, toggleAssumptions: () => set({ showAssumptions: !s.showAssumptions }),
+      mission, missionRows, onOrigin: e => setMission('origin', e.target.value), onDestination: e => setMission('destination', e.target.value), onMiles: e => setMission('miles', e.target.value),
+      payloadFilters: ['Light', 'Medium', 'Heavy'].map(label => ({ label, bg: mission.payload === label ? 'var(--color-accent)' : 'transparent', fg: mission.payload === label ? 'var(--color-bg)' : 'var(--color-text)', pick: () => setMission('payload', label) })),
+      roundBg: mission.roundTrip ? 'var(--color-accent)' : 'transparent', roundFg: mission.roundTrip ? 'var(--color-bg)' : 'var(--color-text)', toggleRound: () => setMission('roundTrip', !mission.roundTrip),
+      chargeBg: mission.charging ? 'var(--color-accent)' : 'transparent', chargeFg: mission.charging ? 'var(--color-bg)' : 'var(--color-text)', toggleCharge: () => setMission('charging', !mission.charging),
+    };
+  }
+}
+</script>
+
+
+</body></html>
